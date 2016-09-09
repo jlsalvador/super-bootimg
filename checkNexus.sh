@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Stable
-regexp='https://dl.google.com/dl/android/aosp/([a-z]+)-([a-z0-9]{3}[0-9]{2}[a-z])-factory-[0-9a-f]*.tgz'
+regexp='https://dl.google.com/dl/android/aosp/([a-z]+)-([a-z0-9]{3}[0-9]{2}[a-z])-factory-[0-9a-f]*.zip'
 curl -s https://developers.google.com/android/nexus/images |
 	grep -F '<a href="https://dl.google.com/dl/android/aosp/'|
 	grep -oE "$regexp" |
